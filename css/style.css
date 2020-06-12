@@ -1,0 +1,292 @@
+
+:root{
+    --primary-bg: #00338d;
+    --primary-bg-dark: #002361;
+    
+    --primary-color: #1d3b7e;
+    --btn-color: #02358e;
+
+    --primary-font: 'Poppins';
+    --primary-font-weight: 400;
+    --secondary-font: 'HelveticaNeueW01-57Cn';
+    
+    --swiper-navigation-size: 30.8px;
+    --swiper-pagination-color: white;
+}
+
+body{
+    font-family: var(--primary-font);
+    font-weight: var(--primary-font-weight);
+}
+
+/*
+    APP TEMPLATE
+*/
+.section-wrapper{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/*///////////////////
+        main navbar
+///////////////////*/
+.main-navbar {
+	width: 100%;
+	position: absolute;
+	z-index: 30;
+	left: 0;
+	top: 0;
+    -webkit-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+    background: transparent;
+}
+.main-navbar.open-menu{
+    -webkit-transition: all ease 0.4s;
+    -o-transition: all ease 0.4s;
+    transition: all ease 0.4s;
+    -webkit-transition-duration: 0.3s;
+         -o-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+	background: rgba(255, 255, 255);
+}
+
+.navbar-fixed-bg {
+	position: fixed;
+	top: 0 !important;
+	background-color: rgba(255, 255, 255);
+	border-bottom: 1px solid rgb(228, 228, 228);
+}
+.main-navbar.open-menu .navbar .collapse .navbar-nav .nav-item a,
+.navbar-fixed-bg .navbar .collapse .navbar-nav .nav-item a{
+	color: var(--primary-bg);
+}
+
+.navbar-fixed-bg .navbar-top {
+	height: 0;
+}
+
+.logo-navbar {
+	max-width: 130px;
+}
+.on-scroll{
+	display: none;
+}
+
+.navbar-fixed-bg .on-scroll {
+	display: inherit;
+}
+.navbar-fixed-bg .off-scroll {
+	display: none;
+}
+/************navbar-top stye****************/
+
+.navbar-top {
+	width: 100%;
+	position: relative;
+	-webkit-transition: 0.3s all ease-in-out;
+	-o-transition: 0.3s all ease-in-out;
+	transition: 0.3s all ease-in-out;
+    overflow: hidden;
+    background-color: var(--primary-bg);
+}
+
+.navbar-top .header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+/* .header span
+{	margin-left: 100px;
+} */
+
+.navbar-top .icons a {
+	padding-right: 1px;
+	color: white;
+	font-size: 12px;
+    -webkit-transition: 0.2s color ease-in-out;
+    -o-transition: 0.2s color ease-in-out;
+    transition: 0.2s color ease-in-out;
+    position: relative;
+}
+.navbar-top .icons .lang-link a:first-child::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 50%;
+    right: -9px;
+    width: 1.5px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background: rgb(218, 218, 218);
+}
+
+.navbar-top .icons .lang-link a:hover {
+    color: #e2e2e2;
+    text-decoration: underline;
+}
+
+.navbar-top span {
+	font-size: 12px;
+	letter-spacing: 2px;
+	line-height: 35px;
+}
+
+@media (max-width: 767.98px) { 
+	.navbar-top span {
+		line-height: 10px;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		font-size: 10px;
+	}
+}
+
+.navbar-light .navbar-toggler{
+	color:white;
+	border: none;
+	font-size: 25px;
+}
+.main-navbar.open-menu .navbar-light .navbar-toggler,
+.navbar-fixed-bg .navbar-light .navbar-toggler{
+    color: var(--btn-color);
+    outline: none;
+}
+/************navbar stye****************/
+
+.navbar .collapse .navbar-nav .nav-item a {
+	padding-left: 15px;
+	padding-right: 15px;
+	font-family: var(--primary-font) , 'Montserrat', sans-serif;
+	color: #fff;
+	font-size: 17px;
+	position: relative;
+}
+
+/*
+    SOCIAL-LINKS
+*/
+.social-links > a.nav-link{
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+/************end navbar stye****************/
+
+.banner-carousel {
+	height: 750px;
+}
+
+@media (max-width: 767.98px) {
+	.banner-carousel {
+		height: 640px ;
+	}
+}
+
+.carousel-inner,
+.carousel-item {
+	height: 100%;
+}
+.banner-main-inpage{
+    height: 440px;
+}
+.banner-main-inpage .title-block{
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+}
+.banner-main-inpage .banner-title{
+    color: white;
+    text-transform: capitalize;
+    font-family: var(--primary-font);
+    font-size: 40px;
+}
+
+.banner-mission .block-top .banner-title{
+    font-size: 30px;
+    font-family: var(--secondary-font);
+    font-style: italic;
+    text-transform: unset;
+    position: relative;
+    margin-bottom: 30px;
+}
+.banner-mission .block-top .banner-title::before{
+    content: "“";  
+    margin-right: 19px;
+}
+.banner-mission .block-top .banner-title::after{
+    content: "”";
+    position: absolute;
+    bottom: 0;
+    margin-left: 12px;
+    line-height: 31px;
+}
+.banner-mission .block-top .banner-title::after ,
+.banner-mission .block-top .banner-title::before {
+    font-size: 3.9rem;
+}
+
+.banner-mission .banner-auth{
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    color: white;
+    font-family: var(--secondary-font);
+}
+.banner-mission .banner-auth h4{
+    font-size: 18px;
+    margin-bottom: 0;
+    font-weight: bold
+}
+
+.banner-mission .banner-d-5{
+    color: white;
+    line-height: 1;
+    font-size: 5.1rem;
+    margin-bottom: 0;
+}
+
+.banner-carousel {
+    background: rgb(0,35,97);
+    background: -o-radial-gradient(top, circle, rgba(0,35,97,1) 0%, rgba(34,34,34,1) 100%);
+    background: radial-gradient(circle at top, rgba(0,35,97,1) 0%, rgba(34,34,34,1) 100%);
+}
+
+.banner-carousel .carousel-content {
+	position: absolute;
+    top : 50%;
+    left: 50%;
+	color: white;
+    -webkit-transition: all cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+    -o-transition: all cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+    transition: all cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+    -webkit-transition-delay: 0.5s;
+         -o-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+    opacity: 1;
+    transform: translate(-50%,-50%);
+}
+
+.banner-carousel .swiper-slide-active .carousel-content ,
+.banner-carousel .carousel-item.active .carousel-content {
+    opacity: 1;
+}
+
+.banner-carousel .swiper-pagination-bullets .swiper-pagination-bullet-active{
+    --swiper-pagination-color: #ffffff;
+    background: var(--swiper-pagination-color);
+}
+.banner-carousel .swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: solid 2px #ffffff;
+    opacity: 1;
+}
